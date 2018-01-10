@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>我的账户</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body>
+<div class="mob-cont invitation">
+    <div class="inv-head">
+        <div class="bh">
+            <p class="img"> <img src="static/img/headimg.png" alt=""></p>
+            <p class="welcome">欢迎您</p>
+            <p>张三</p>
+            <p>首山征信员工</p>
+        </div>
+        <ul class="bf clear">
+            <li><i class="sprite icon-34"></i> <em>邀请</em> 23</li>
+            <li><i class="sprite icon-36"></i> <em>排名</em> 23</li>
+        </ul>
+    </div>
+    <div class="inv-box">
+        <ul class="inv-nav clear">
+            <li class="cur">全部</li>
+            <li>当天</li>
+            <li>当周</li>
+            <li>当月</li>
+            <li>当月</li>
+        </ul>
+        <ul class="inv-con clear">
+            <li><p>关注数量</p> <span><em>77</em>个</span></li>
+            <li><p>注册数量</p> <span><em>77</em>个</span></li>
+            <li><p>申请数量</p> <span><em>77</em>笔</span></li>
+            <li><p>放款数量</p> <span><em>77</em>笔</span></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+            home.init();
+          var exports = {};
+          exports.invbtn = function(){
+            $('.inv-nav').on('click','li',function(){
+                $(this).addClass('cur').siblings().removeClass('cur');
+            })
+          }
+          exports.invbtn();
+      });
+  });
+</script>
+
+</body>
+</html>

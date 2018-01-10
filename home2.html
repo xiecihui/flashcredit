@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="static/css/carrieroperator.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_jg01e1w7oic6jemi.css">
+</head>
+<body>
+<div class="h20x"></div>
+<div class="mob-cont operator">
+   <div class="mob-div telaut">
+        <form action="info2" method="get" >
+            <p class="oper-tel"><i class="sprite icon-11"></i>您的手机号：<em class="telnum">13812341234</em></p>
+            <p class="oper-name"><i class="sprite"></i>所属运营商：<em class="telname">上海移动</em></p>
+            <p class="rowp pass"><i class="sprite icon-17"></i><input class="Operate" type="tel" name="" placeholder="运营商服务密码" value=""></p>
+            <p class="rowp code hide"><i class="sprite icon-17"></i><input class="" type="tel" name="" placeholder="请输入短信验证码" value=""> <a href="javascript:;">获取验证码</a></p>
+            <p class="forgetpassword"><i></i><a href="javascript:;">忘记服务密码</a></p>
+            <p class="rowp">
+              <i class="sprite icon-19"></i>
+              <input type="number" name="" placeholder="请输入图形验证码" value="">
+              <a class="codeimg" href="javascript:;"><img src="http://temp.im/75x30/444/fff" onclick="this.src='code.xps?'+Math.random()" /> </a>
+            </p>
+            <p class="rowp code"><i class="sprite icon-17"></i><input class="" type="tel" name="" placeholder="请输入短信验证码" value=""> <a href="javascript:;">获取验证码</a></p>
+            <p class="rowp">
+              <i class="sprite icon-19"></i>
+              <input type="number" name="" placeholder="请输入图形验证码" value="">
+              <a class="codeimg" href="javascript:;"><img src="http://temp.im/75x30/444/fff" onclick="this.src='code.xps?'+Math.random()" /> </a>
+            </p>
+            <p class="rowp code"><i class="sprite icon-17"></i><input class="" type="tel" name="" placeholder="请输入短信验证码" value=""> <a href="javascript:;">获取验证码</a></p>
+          </form>
+        <a class="passtips" href="javascript:;"><i class="sprite icon-8"></i>银行最高级别加密  保障您的信息安全</a>
+
+        <div class="spinner hide">
+          <div class="loading1"></div>
+          <div class="loading2"></div>
+          <div class="loading3"></div>
+        </div>
+
+        <a class="abtn" href="javascript:;" title="">下一步</a>
+    </div> 
+</div>
+<div class="h20x"></div>
+
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home','controller/operator'], function(home,operator) {
+            home.init();
+            operator.init();
+      });
+  });
+</script>
+
+</body>
+</html>

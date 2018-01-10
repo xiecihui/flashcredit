@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷-忘记登录密码</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_jg01e1w7oic6jemi.css">
+</head>
+<body class="loginpass">
+<div class="h20x"></div>
+<div class="mod-nav">
+    <ul class="mod-pass clear">
+        <li class="cur on">
+            <a href="javascript:;">
+                <i class="sprite icon-9"></i>
+                <em>输入验证码</em>
+                <span class="sprite arrow"></span>
+            </a>
+        </li>
+        <li class="cur">
+            <a href="javascript:;">
+                <i class="sprite icon-10"></i>
+                <em>重设登录密码</em>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="h20x"></div>
+<div class="mob-cont">
+   <div class="mob-div telaut">
+        <form action="info2" method="get" >
+            <p class="pass"><input class="" type="text" name="" placeholder="请重新设置密码（6-18位数字字母组合）" value=""></p>
+        </form>
+        <a class="abtn" href="javascript:;" title="">下一步</a>
+    </div> 
+</div>
+<div class="h20x"></div>
+
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+      });
+  });
+</script>
+
+</body>
+</html>

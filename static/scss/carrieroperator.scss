@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.operator{
+    .rowp{
+        width: 100%;
+        height: .85rem;
+        border-radius: .425rem;
+        border: 1px solid #aaa;
+        display: flex;
+        overflow: hidden;
+        margin-top: .25rem;
+        .codeimg{
+            text-align:center;
+        }
+    }
+}
+.loginpass,.homepass{
+    .mob-cont{
+        height:82%;
+    }
+}
+.telaut{
+    p{
+        display:flex;
+        align-items:center;
+        font-size:.28rem;
+        padding:0 .28rem;
+        box-sizing:border-box;
+        color:#999;
+        text-align:left;
+        text-indent:20px;
+        .telnum{
+            color:#666;
+        }
+        .telname{
+            color:#f6671b;
+        }
+    }
+}

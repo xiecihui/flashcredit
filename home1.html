@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="static/css/LCalendar.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_jg01e1w7oic6jemi.css">
+</head>
+
+<body>
+    <div class="h20x"></div>
+    <div class="mob-cont">
+        <div class="mob-div realname">
+            <form action="info1" method="get">
+                <p><span>姓名</span><input class="" type="text" name="" placeholder="本人姓名" value=""></p>
+                <p><span>身份证号</span><input id="idnumber" class="" type="text" name="" placeholder="请输入身份证号" value=""></p>
+                <div class="cardData">
+                    <span>有效期限</span>
+                    <div class="sample-tit">
+                        <input type="text" id="idTimes" readonly="" name="idTimes" placeholder="有效开始时间" />
+                        <em>至</em>
+                        <input type="text" id="idTimee" readonly="" name="idTimee" placeholder="有效结束时间 " />
+                    </div>
+                </div>
+                <div class="idCare album-zheng ">
+                    <span>上传照片1</span>
+                    <a class="Sample " href="javascript:; ">示例</a>
+                    <div class="sample-tit ">本人身份证正面</div>
+                    <div class="upload-btn btn-old ">
+                        <!-- <input type="file " vlaue="本人身份证正面 " capture="camera " accept="image/* " name=" " id="filePicker "> -->
+                        <div class="filebtn " id="filePicker0 ">本人身份证正面</div>
+                    </div>
+                    <div class="upload-img hide " id="fileList0 "></div>
+                </div>
+                <div class="idCare album-fan ">
+                    <span>上传照片2</span>
+                    <a class="Sample " href="javascript:; ">示例</a>
+                    <div class="sample-tit ">本人身份证反面</div>
+                    <div class="upload-btn btn-new ">
+                        <!-- <input type="file " vlaue="本人身份证反面 " capture="camera " accept="image/* " name=" " id="image2 "> -->
+                        <div class="filebtn " id="filePicker1 ">本人身份证反面</div>
+                    </div>
+                    <div class="upload-img hide " id="fileList1 "></div>
+                </div>
+                <div class="idCare album-quan ">
+                    <span>上传照片3</span>
+                    <a class="Sample " href="javascript:; ">示例</a>
+                    <div class="sample-tit ">本人持身份证正面照</div>
+                    <div class="upload-btn btn-new ">
+                        <!-- <input type="file " vlaue="本人持身份证正面照 " capture="camera " accept="image/* " name=" " id="image3 "> -->
+                        <div class="filebtn " id="filePicker2 ">本人持身份证正面照</div>
+                    </div>
+                    <div class="upload-img hide " id="fileList2 "></div>
+                </div>
+            </form>
+
+
+            <a class="abtn submit " href="javascript:; " title=" ">下一步</a>
+        </div>
+    </div>
+    <div class="h20x "></div>
+    <div class="mod-layer-div hide "></div>
+    <a class="IDClose hide " href="javascript:; " title=" ">朕知道了</a>
+    <div class="boxSample hide "><img src="static/img/IDzheng.png " alt=" "></div>
+
+    <!-- <script type="text/javascript " src="static/js/lib/jquery/zepto.min.js "></script> -->
+    <!-- <script type="text/javascript " src="static/js/widget/iscroll-zoom.js "></script>
+<script type="text/javascript " src="static/js/controller/script.js "></script> -->
+    <script type="text/javascript " src="static/js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script type="text/javascript " src="static/js/LCalendar.js "></script>
+    <script type="text/javascript " src="static/js/controller/webuploader.js "></script>
+    <script type="text/javascript " src="static/js/controller/getting-started.js "></script>
+    <script type="text/javascript " src="static/js/controller/rem.js"></script>
+
+    <script type="text/javascript ">
+        var boxSam = $('.boxSample');
+        var modLayer = $('.mod-layer-div');
+        $(".Sample ").each(function() {
+            var _this = $(this);
+            var _index = _this.index();
+            _this.on('click', function(e) {
+                e.preventDefault();
+                modLayer.removeClass('hide');
+                boxSam.css('display', 'block');
+                var tel = '<div style="color:#036eb8; padding:0 10px; line-height:20px; margin-top:13px; text-align:center; "><p>* 身份证信息无遮盖、内容清晰，避免证件与头部重叠</p>' +
+                    '<p>* 不可自拍，且手持身份证需同提供的身份证照片一致</p>' +
+                    '</div>';
+
+                $('.IDClose').removeClass('hide');
+                if (_this.parent().hasClass('album-zheng')) {
+                    boxSam.find('img').attr('src', 'static/img/IDzheng.png');
+                }
+                if (_this.parent().hasClass('album-fan')) {
+                    boxSam.find('img').attr('src', 'static/img/IDzheng1.png');
+                }
+                if (_this.parent().hasClass('album-quan')) {
+                    boxSam.append(tel);
+                    var high = boxSam.children('div').height() + boxSam.children('img').height() + boxSam.children('img').height() / 2;
+                    boxSam.css({
+                        'background-color': '#fff',
+                        'height': high,
+                        'margin-top': -boxSam.children('img').height() / 4
+                    });
+                    boxSam.find('img').attr('src', 'static/img/IDzheng2.png');
+                }
+            });
+        });
+        $('.IDClose').on('click', function() {
+            $(this).addClass('hide').removeAttr('style');
+            modLayer.addClass('hide');
+            boxSam.hide().removeAttr('style');
+            boxSam.children('div').remove();
+        });
+        $('.cardData').find('.sample-tit').on('focus', 'input', function(e) {
+            e.preventDefault();
+            $(this).removeAttr('placeholder');
+        });
+        $('.workstart').on('blur', function(e) {
+            e.preventDefault();
+            $(this).removeAttr('placeholder');
+        });
+        $('input[name=idTimes],input[name=idTimee]').on('focus', function() {
+            $(this).trigger('blur');
+        });
+        var startTime = new LCalendar();
+        var entTime;
+        startTime.init({
+            'trigger': '#idTimes', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+            'minDate': '1970-01-01', //最小日期 注意：该值会覆盖标签内定义的日期范围
+            'maxDate': (new Date().getFullYear() + 0) + '-' + 12 + '-' + 31 //最大日期
+        });
+                console.log(startTime)
+        $('#idTimee').on('blur', function(e) {
+            e.stopPropagation();
+            var newDate = new Date();
+            var date = $('#idnumber').val();
+            nowDate = newDate.getFullYear();
+            strDate = (newDate.getFullYear() - 45);
+            var _this = $(this);
+            if (date == '' || date == null) {
+                $(this).val('请填写身份证!!!');
+                return;
+            }
+            if (strDate <= parseInt(GetBirthdatByIdNo(date))) {
+                entTime = new LCalendar();
+                entTime.init({
+                    'trigger': '#idTimee', //标签id
+                    'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+                    'minDate': (new Date().getFullYear() - 1) + '-' + 12 + '-' + 31, //最小日期 注意：该值会覆盖标签内定义的日期范围
+                    'maxDate': (new Date().getFullYear() + 80) + '-' + 12 + '-' + 31 //最大日期
+                });
+                $('#idTimee').off('blur');
+            } else {
+                $(this).val('长期');
+            }
+
+        });
+
+        function GetBirthdatByIdNo(iIdNo) {
+            var tmpStr = "";
+            var birthday = $('#idnumber');
+            iIdNo = $.trim(iIdNo);
+            if (iIdNo.length == 15) {
+                tmpStr = iIdNo.substring(6, 12);
+                tmpStr = "19" + tmpStr;
+                tmpStr = tmpStr.substring(0, 4);
+            } else {
+                tmpStr = iIdNo.substring(6, 14);
+                //tmpStr = tmpStr.substring(0, 4) + "-" + tmpStr.substring(4, 6) + "-" + tmpStr.substring(6);
+                tmpStr = tmpStr.substring(0, 4);
+            }
+            return tmpStr;
+        }
+    </script>
+</body>
+
+</html>

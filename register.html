@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_jg01e1w7oic6jemi.css">
+</head>
+<body>
+<div class="mob-login register">
+    <div class="login-log">
+        <img src="static/img/logo1.png" alt="">
+    </div>
+    <div class="login-box ">
+        <div class="contlgin">
+            <p ><i class="sprite icon-11"></i> <input type="tel" name="" placeholder="请输入您的手机号码" value=""></p>
+            <p ><i class="sprite icon-17"></i> <input type="tel" name="" placeholder="请输入验证码" value="">
+                <button type="button" class="btn" id="Jbtn">获取验证码</button></p>
+            <p ><i class="sprite icon-19"></i> <input type="tel" name="" placeholder="请输入验证码" value="">
+                <a class="codeimg" href="javascript:;"><img src="http://temp.im/75x30/444/fff" onclick="this.src='code.xps?'+Math.random()" /> </a>
+            </p>
+            <p >
+                <i class="sprite icon-12"></i> <input class="telpass" type="text" name="password"  placeholder="请设置您的密码" value="">
+            </p>
+            <p ><i class="sprite icon-33"></i> <input type="tel" name="" placeholder="请输入推荐人的手机号码" value=""></p>
+            <div class="log-tips"><span>验证码错误！！！</span></div>
+        </div>
+    </div>
+    <div class="agree">
+        <div class="checkboxbtn">
+            <input type="checkbox" value="0" id="checkboxInput" name="" />
+            <label for="checkboxInput"></label>
+        </div>
+        <span>我同意 <a href="" title="《借款协议》">《借款协议》</a></span>
+    </div>
+    <a class="abtn logbtn" href="javascript:;" title="">马上借钱</a>
+    <a class="abtn regbtn" href="javascript:;" title="">立即登录</a>
+</div> 
+
+
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+      });
+  });
+</script>
+
+</body>
+</html>

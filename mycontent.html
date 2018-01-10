@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>我的账户</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+
+<body>
+    <div class="mycont mob-cont">
+        <div class="h20x"></div>
+        <div class="mycont-head">
+            <div class="mycont-hd">
+                <img src="static/img/headimg.png" alt="">
+                <div class="mycont-hd-title">
+                    <span>乔能丹</span>
+                    <p id="number">15913234008</p>
+                </div>
+                <div class="mycont-code" id="meCode">
+                    <img codeSrc='static/img/staffcode.png' src="static/img/staffcode.png" class="staff" alt="">
+                </div>
+            </div>
+            <div class="mycont-ft">
+                <ul class="clear">
+                    <li><a href="myloan-reviewed.html" title="借款审批"><span><i class="sprite icon-46"></i>借款审批</span><em>3</em></a></li>
+                    <li><a href="myloan-repayments.html" title=""><span><i class="sprite icon-47"></i>我要还款</span><em>1</em></a></li>
+                    <li><a href="myloan.html"><span><i class="sprite icon-48"></i>历史借款</span><em>3</em></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="h20x"></div>
+        <ul class="my-li mycont-other clear">
+            <li><a href="myAuthentication.html" title="我的认证"><span><i class="sprite icon-40"></i>我的认证</span> <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+            <li><a href="Invitation.html" title="邀请好友"><span><i class="sprite icon-41"></i>邀请好友</span> <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+            <li><a href="about.html" title="关于我们"><span><i class="sprite icon-42"></i>关于我们</span> <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+            <li><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.shoushan.zhenxin" title="更多借款产品"><span><i class="sprite icon-43"></i>更多借款产品</span> <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+            <li><a class="WeChatID" href="javascript:;" title="关注钱铺公众号"><span><i class="sprite icon-44"></i>关注公众号</span>
+        <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+            <li><a href="javascript:;" id="signOut" title="退出当前账户"><span><i class="sprite icon-45"></i>退出当前账户</span>
+        <p></p> <i class="rArrow iconfont">&#xe688;</i></a></li>
+        </ul>
+    </div>
+    <a href="notified.html" class="notifiedIcon" title="消息通知"><i class="sprite icon-50"></i> <em></em></a>
+
+    <!-- 弹出框 -->
+    <ul class="mod-mune">
+        <li> <a href="javascript:;" title="闪信贷"><i class="sprite icon-7 "></i>闪信贷</a> </li>
+        <li class="cur"> <a href="javascript:;" title="我的"><i class="iconfont">&#xe60c;</i>我的</a> </li>
+    </ul>
+    <div class="mod-layer-div hide"></div>
+    <div class="mod-layer WeChatlayer hide">
+        <div class="layer-cont">
+            <img src="static/img/erweima.png" alt="闪信贷">
+        </div>
+        <p class="layer-title">长按识别图中二维码>关注公众号</p>
+        <a class="layer-close" href="javascript:;">朕知道了</a>
+    </div>
+
+    <script src="static/js/lib/require/require.js"></script>
+    <script src="static/js/controller/rem.js"></script>
+    <script>
+        require(['./static/js/config.js'], function() {
+            require(['controller/home', 'layerui'], function(home, layerUi) {
+                home.init();
+                var exports = {};
+                exports.goback = function() {
+                    $('#signOut').on('click', function(e) {
+                        e.preventDefault();
+                        layerUi.styleS2('文字提示语');
+                    });
+                }
+                exports.goback();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="static/css/selectadd.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="home3">
+<div class="h20x"></div>
+<div class="mob-cont">
+   <div class="mob-div perdata">
+        <ul class="pre-nav clear">
+            <li class="cur"> <a href="javascript:;" title=""><i class="sprite icon-20"></i>个人资料</a></li>
+            <li> <a href="javascript:;" title=""><i class="sprite icon-21"></i>单位信息</a></li>
+            <li> <a href="javascript:;" title=""><i class="sprite icon-22"></i>亲密联络人</a></li>
+        </ul>
+        <div class="pres">
+            <div class="pre-cont" >
+                <form action="" method="get">
+                    <ul class="preinfo clear">
+                        <li>
+                            <span><em class="xinghao">*</em>最高学历</span>
+                            <select id="education">
+                                <option value="" selected=""> 选择最高学历 </option>
+                                <option value="1">本科</option>
+                                <option value="2">专科</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>婚姻状况</span>
+                            <select id="marriage">
+                                <option value="" selected=""> 选择 </option>
+                                <option value="1">已婚</option>
+                                <option value="2">未婚</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                         <li>
+                            <span><em class="xinghao">*</em>现居住地</span>
+                            <!--<select>
+                                <option value="" selected=""> 选择城市 </option>
+                                <option value="1">上海</option>
+                                <option value="2">北京</option>
+                            </select> -->  
+                            <div class="selectbox phoneTreeBox" id="nowland">
+                                <!--
+                                <i class="arrow iconfont">&#xe62c;</i>
+                                <div class="text">上海市</div> -->
+                            </div> 
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>现住具体地址</span>
+                            <input type="text" name="" id="nowaddress" placeholder="XX街道XX号XX室" value="">
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>电子邮箱</span>
+                            <input type="text" id="Jemail" name="" placeholder="输入电子邮箱地址" value="">
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>户籍所在地</span>
+                            <!-- <select>
+                                <option value="" selected=""> 选择城市 </option>
+                                <option value="1">上海</option>
+                                <option value="2">北京</option>
+                            </select> -->
+                            <div class="selectbox phoneTreeBox" id="regoffice">
+                                <!--
+                                <i class="arrow iconfont">&#xe62c;</i>
+                                <div class="text">上海市</div> -->
+                            </div> 
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>客户类型</span>
+                            <select id="Custype">
+                                <option value="" selected=""> 选择方式 </option>
+                                <option value="1">工薪</option>
+                                <option value="2">非工薪</option>
+                                <option value="2">其他</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="pre-cont" style="display: none;">
+                <form action="" method="get">
+                    <ul class="preinfo clear">
+                        <li>
+                            <span><em class="xinghao">*</em>工作单位</span>
+                            <input type="text" name="" id="dwxinxi" placeholder="输入单位名称" value="">
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>单位性质</span>
+                            <select id="unitPro">
+                                <option value="" selected=""> 选择单位性质 </option>
+                                <option value="1">机关事业</option>
+                                <option value="2">国有股份</option>
+                                <option value="3">私企</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>单位所在地</span>
+                            <!-- <select>
+                                <option value="" selected=""> 选择城市地区 </option>
+                                <option value="1">上海</option>
+                                <option value="2">北京</option>
+                            </select> -->
+                            <div class="selectbox phoneTreeBox" level="2">
+                                <!--
+                                <i class="arrow iconfont">&#xe62c;</i>
+                                <div class="text">上海市</div> -->
+                            </div> 
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                         <li>
+                            <span><em class="xinghao">*</em>单位地址</span>
+                            <input type="text" name="" placeholder="XX街道XX号XX室" value="">
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>发薪方式</span>
+                            <select>
+                                <option value="" selected=""> 选择方式 </option>
+                                <option value="1">现金</option>
+                                <option value="2">打卡</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>目前月收入</span>
+                            <input type="number" name="" class="numberTxt" placeholder="输入金额" value=""> 元
+                        </li>
+                        <li>
+                            <span>单位电话</span>
+                            <input type="text" name="" placeholder="例：02161661166" value="">
+                        </li>
+                        <li>
+                            <span><em class="xinghao">*</em>参加工作时间</span>
+                            <input  type="month" class="workstart" name="" readonly="readonly" value="-/-" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="pre-cont" style="display: none">
+                <form action="" method="get">
+                    <dl class="preinfo clear">
+                        <dt><em class="xinghao">*</em> 直系亲属 </dt>
+                        <dd>
+                            <span>姓名</span>
+                            <input type="text" name="" placeholder="输入姓名" value="">
+                        </dd>
+                        <dd>
+                            <span>直系亲属关系</span>
+                            <select>
+                                <option value="" selected=""> 选择关系 </option>
+                                <option value="1">配偶</option>
+                                <option value="2">父母</option>
+                                <option value="3">子女</option>
+                                <option value="4">兄弟姐妹</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </dd>
+                        <dd>
+                            <span>手机号码</span>
+                            <input type="text" name="" placeholder="手机号码" value="">
+                        </dd>
+                    </dl>
+                    <dl class="preinfo clear">
+                        <dt><em class="xinghao">*</em> 亲属/朋友 </dt>
+                        <dd>
+                            <span>姓名</span>
+                            <input type="tel" name="" placeholder="输入姓名" value="">
+                        </dd>
+                        <dd>
+                            <span>亲属/朋友关系</span>
+                            <select>
+                                <option value="" selected=""> 选择关系 </option>
+                                <option value="1">其他亲属</option>
+                                <option value="2">配偶</option>
+                                <option value="3">父母</option>
+                                <option value="4">兄弟姐妹</option>
+                                <option value="5">朋友</option>
+                            </select>
+                            <i class="rArrow iconfont">&#xe688;</i>
+                        </dd>
+                        <dd>
+                            <span>手机号码</span>
+                            <input type="tel" name="" placeholder="手机号码" value="">
+                        </dd>
+                    </dl>
+                </form>
+            </div>
+        </div>
+        <p class="infoBtn">
+            <a class="abtn prevBtn hide" href="javascript:;" title="">上一步</a>
+            <em></em>
+            <a class="abtn nextBtn" href="javascript:;" title="">下一步</a>
+        </p>
+    </div> 
+</div>
+<div class="h20x"></div>
+<!-- <div class="layerBox">
+    <div class="logo"><img src="static/img/layer-!.png" alt=""></div>
+    <div class="text"></div>
+    <div class="submit">
+        <a href="javascript:;"> 确定不改了 </a>
+        <a href="javascript:;"> 朕在看看 </a>
+    </div>
+</div> -->
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script src="static/js/controller/selectAdd/data.js"></script>
+
+<script>
+  require(['./static/js/config.js','./static/js/lib/jquery/jquery-1.11.3.min'], function() {
+      require(['controller/home'], function(home) {
+        home.init();
+          function show(){
+           var mydate = new Date();
+           var str = "" + mydate.getFullYear() + "年";
+               str += (mydate.getMonth()+1) + "月";
+            return str
+          }
+          $('.workstart').attr('placeholder',show())
+          $('.workstart').on('focus', function(e) {
+              e.preventDefault();
+              $(this).removeAttr('placeholder');
+          });
+          $('.workstart').on('blur', function(e) {
+              e.preventDefault();
+              $(this).removeAttr('placeholder');
+          });
+    });
+  });
+</script>
+
+</body>
+</html>

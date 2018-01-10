@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@import "./hummer/function";
+
+// @font-face {font-family: "iconfont";
+//   src: url('../css/font/iconfont.eot'); /* IE9*/
+//   src: url('../css/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('../css/font/iconfont.woff') format('woff'), /* chrome, firefox */
+//   url('../css/font/iconfont.ttf') format('truetype'),  chrome, firefox, opera, Safari, Android, iOS 4.2+
+//   url('../css/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+// }
+// .iconfont {
+//   font-family:"iconfont" !important;
+//   font-size:16px;
+//   font-style:normal;
+//   -webkit-font-smoothing: antialiased;
+//   -webkit-text-stroke-width: 0.2px;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+
+
+// public color
+
+$fontColor:                  #333333; // 文字颜色
+$fontHoverColor:             #00c860; // 文字鼠标经过颜色
+$sGreen:                     #5e9732; // 独有绿色
+$headBg:                     #0069aa; // 头部logo区块背景颜色
+$navBg:                      #004b8d; // nav 背影颜色
+$sOrange:                    #ffc222; // 唯独的蓝配黄
+$F:                          #FFFFFF; // 白色
+$F1:                         #f1f1f1; // 底白
+// public width&height&font-size
+
+$w1200:             1200px; // 整体宽度
+$w21:               21px; // 间距宽度
+$w20:               21px; // 间距宽度
+$s14:               14px; // 字体大小
+
+// // 内容区块宽度
+// .global-center {
+//   width: 100%;
+//   &-box {
+//     margin-left: 5px;
+//     margin-right: 5px;
+//   }
+//   @include media(">=maxDesktop") {
+//     width: 1500px;
+//     margin: 0 auto;
+//     &-box {
+//       margin-left: 0;
+//       margin-right: 0;
+//     }
+//   }
+//   // =1200px < 1500
+//   @include media(">=desktop", "<maxDesktop") {
+//     width: 1200px;
+//     margin: 0 auto;
+//     &-box {
+//       margin-left: 0;
+//       margin-right: 0;
+//     }
+//   }
+//   // 980 设计稿
+//   @include media(">=tablet", "<desktop") {
+//     width: 100%;
+//   }
+
+//   // 750 设计稿
+//   @include media(">=pad", "<tablet") {
+//     width: 100%;
+//   }
+
+//   // 640 设计稿
+//   @include media(">=phone", "<pad") {
+//     width: 100%;
+//   }
+// }

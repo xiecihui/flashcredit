@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>借款详情</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="schedules2">
+<div class="sche-box">
+  <div class="sche-bt">
+    <i class="sprite icon-35"></i> 我的借款申请-优客贷
+  </div>
+  <div class="sche-bf">
+    <ul class="sche-detial clear">
+      <li><span>借款金额</span> <em>1000.00元</em></li>
+      <li><span>到账金额</span> <em>856.00元</em></li>
+      <li><span>快速信审费</span> <em>108.00元</em></li>
+      <li><span>信用咨询费</span> <em>36.00元</em></li>
+      <li><span>借款期限</span> <em>21天</em></li>
+      <li><span>还款方式</span> <em>一次还本付息</em></li>
+      <li><span>还款金额</span> <em>1117.00元</em></li>
+    </ul>
+  </div>
+</div>
+
+<div class="sche-box">
+  <div class="sche-bt">
+    <i class="sprite icon-36"></i> 我的借款进度
+  </div>
+  <div class="sche-bf">
+      <ul class="setbacks">
+        <li><span>申请审核</span> <i class="sprite icon-37"></i></li>
+        <li><span>合同签署</span> <i class="sprite icon-37"></i></li>
+        <li><span>借款发放</span> <i class="sprite icon-37"></i></li>
+        <li><span>我要还款</span></li>
+      </ul>
+      <ul class="setall">
+        <li class="cur">
+          <a href="javascript:;" title="注册成功">
+            <u></u>
+            <span>2/8</span>
+            <p>注册成功</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" title="审核通过">
+            <u></u>
+            <span>2/8</span>
+            <p>审核通过</p>
+          </a>
+        </li>
+        <li class='errorTit'>
+          <a href="javascript:;" title="审核未通过">
+            <u></u>
+            <span>2/8</span>
+            <p>审核未通过</p>
+          </a>
+          <div class="tigs hide">
+            <p>您的综合评分不足</br>填写详细资料，提高信审通过率</p>
+            <p>上传身份证照片不合规，</br>请于*月*日前  <a href="" title="">重新拍照上传</a> </p>
+          </div>
+        </li>
+        <li class="on">
+          <a href="javascript:;" title="签署合同">
+            <u></u>
+            <span>2/8</span>
+            <p>签署合同</p>
+          </a>
+          <div class="tigs">
+              <p>请在3日有效期内签约</p>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;" title="放款成功">
+            <u></u>
+            <span>2/8</span>
+            <p>放款成功</p>
+          </a>
+        </li>
+        <li class="successOn">
+          <a href="javascript:;" title="还款成功">
+            <u></u>
+            <span>2/8</span>
+            <p>第1/12期 1460.00元 <em>还款成功</em></p>
+          </a>
+        </li>
+        <li class="on overdue">
+          <a href="javascript:;" title="已逾期">
+            <u></u>
+            <span>2/8</span>
+            <p>第1/12期 1460.00元 <em>已逾期</em></p>
+          </a>
+        </li>
+        <li class="on boxClose">
+          <a href="javascript:;" title="已逾期">
+            <u></u>
+            <span>2/8</span>
+            <p> 已关闭</p>
+          </a>
+        </li>
+      </ul>
+      <a class="btns" href="javascript:;">
+        还款
+      </a>
+  </div>
+</div>
+
+<div class="mod-layer-div hide"></div>
+<div class="mod-layer scheduleslayer hide">
+    <div class="layer-cont">
+        <img src="static/img/logo.png" alt="闪信贷">
+    </div>
+    <p class="layer-title">应还金额：<em>524.53元</em></p>
+    <p class="layer-text">已逾期1天，逾期管理费1.5元</p>
+    <a class="schebtn" href="javascript:;">朕知道了</a>
+</div>
+<script src="static/js/controller/rem.js" type="text/javascript"></script>
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/lib/jquery/jquery-1.11.3.min'], function() {
+      var index;
+      index = {
+        layer:function(){
+          $('.overdue').on('click',function(){
+              $('.mod-layer-div').removeClass('hide');
+              $('.scheduleslayer').removeClass('hide');
+          })
+          $('.schebtn').on('click',function(){
+            $('.mod-layer-div').addClass('hide');
+            $('.scheduleslayer').addClass('hide');
+          })
+        },
+        main:function(){
+          this.layer();
+        }
+      }
+      index.main()
+  });
+</script>
+</body>
+</html>

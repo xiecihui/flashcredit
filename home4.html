@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="bankOn">
+<div class="h20x"></div>
+<div class="mob-cont">
+   <div class="mob-div perdata">
+        <div class="pre-cont">
+            <form action="" method="get">
+                <ul class="preinfo clear">
+                    <li>
+                        <span>持卡人</span>
+                        <input type="text" name="" placeholder="输入持卡人姓名" value="" disabled="disabled">
+                    </li>
+                    <li>
+                        <span>预留手机号</span>
+                        <input type="text" name="" placeholder="输入预留手机号" value="" disabled="disabled">
+                    </li>
+                    <li>
+                        <span>选择银行</span>
+                        <select>
+                            <option value="" selected=""> 选择银行 </option>
+                            <option value="1">工商</option>
+                            <option value="2">建设</option>
+                        </select>
+                        <i class="rArrow iconfont">&#xe688;</i>
+                    </li>
+                     <li>
+                        <span>银行卡号</span>
+                        <input type="text" name="" placeholder="输入银行卡号" value="">
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <a class="abtn" href="javascript:;" title="">提交</a>
+    </div> 
+</div>
+<div class="h20x"></div>
+
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+      });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>借款协议</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_u3je8stp7mwbfbt9.css">
+</head>
+<body class="mob-boxs agreement">
+    <div class="mob-divs">
+      <p class="contractNum"><em>合同编号：353612348888</em></p>
+      <p class="title">银钱铺子借款协议</p>
+      <div class="agre-cont">
+        <iframe id="loding" src="http://www.baidu.com"></iframe>
+        甲乙双方就借款事宜，在平等自愿、协商一致的基础上达成如下协议，以资双方共同遵守。
+        <p class="row">乙方贷给甲方人民币（大写）<input type="text" class="text1" value="">，于 <input type="number" class="text2" name="" value="">年 <input type="number" class="text3" name="" value="">月 <input type="number" class="text4" name="" value="">日前交付甲方。</p>
+        <p class="row">借款利息：<input type="number" class="text5" name="" value=""></p>
+        <p class="row">借款期限：</p>
+        <p class="row">还款日期： <input type="number" class="text6" name="" value="">年 <input type="number" class="text7" name="" value="">月 <input type="number" class="text8" name="" value="">日。 还款方式：现金/<input type="number" class="text9" name="" value="">支付。</p>
+        <p class="row">违约责任：</p>
+        <div class="rowCon">
+          <p class="row">1、借款方的违约责任</p>
+          <p class="row">1）借款方不按合同规定的用途使用借款，贷款方有权收回部分或全部贷款，对违约使用的部分，按银行规定的利率加收罚息。</p>
+          <p class="row">2）借款方如逾期不还借款，贷款方有权追回借款，并从到期日起付日息1% 。</p>
+          <p class="row">3）借款方使用借款造成损失浪费或利用借款合同进行违法活动的，贷款方应追回贷款本息，有关单位对直接责任人应追究行政和经济责任。情节严重的，由司法机关追究刑事责任。
+          相同。</p>
+        </div>
+      </div>
+      <div class="xjb"></div>
+      <a class="abtn" id="agreementBtn" href="javascript:;" title="">同意并签字</a>
+      <p class="footerBtn hide">
+        <a class="download" href="/" title="">下载协议</a>
+        <a class="goback" href="javascript:history.go(-1);" title="">返回</a>
+      </p>
+    </div>
+<div class="mod-layer-div hide"></div>
+<div class="mod-layer agreementlayer hide">
+  <a class="autograph" href="javascript:;">电子签名</a>
+  <a class="autograph" href="javascript:;">手写签名</a>
+  <a class="layer-close" href="javascript:;">取消</a>
+</div>
+<div class="mod-layer agreeSuc hide">
+    <div class="layer-cont">
+        <i class="iconfont">&#xe60e;</i>
+    </div>
+    <p class="layer-title"><i class="iconfont">&#xe64c;</i>未开通网信理财账号无法办理收款手续</p>
+    <a class="layer-close" href="javascript:;">朕知道了</a>
+</div>
+
+<div class="mod-layer-div hide"></div>
+<div class="spinner hide">
+  <div class="loading1"></div>
+  <div class="loading2"></div>
+  <div class="loading3"></div>
+</div>
+
+
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+        $('#loding').on('load',function() { 
+          console.log(1);
+        }); 
+      });
+  });
+</script>
+</body>
+</html>

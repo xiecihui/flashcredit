@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>借款申请</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="alternates3">
+<div class="h20x"></div>
+<div class="loan-appli-header">
+    <div class="box-header">
+        <img src="./static/img/loan-appli-icon1.png" alt="">完成进度
+    </div>
+    <div class="box-footer">
+        <ul class="clear">
+            <li><img src="./static/img/loan-appli-icon2.png" alt=""><span>身份认证</span></li>
+            <!-- <li><img src="./static/img/loan-appli-icon3.png" alt=""><span>人脸识别</span></li>-->
+            <li><img src="./static/img/loan-appli-icon4.png" alt=""><span>个人资料</span></li>
+            <li><img src="./static/img/loan-appli-icon5.png" alt=""><span>运营商认证</span></li>
+        </ul>
+    </div>
+</div>
+<div class="h20x"></div>
+<div class="mob-cont loan-appli">
+    <div class="box-content clear">
+        <ul class="clear">
+            <li class="cur"><a href="javascript:;"> <span> <i class="sprite icon-38"> </i>身份认证</span>  <em>已认证</em></a> </li>
+            <li class="cur"> <a href=""> <span><i class="sprite icon-37"> </i>个人资料</span>  <em>未认证 <i class="rArrow iconfont">&#xe688;</i></em> </a> </li>
+            <li class="cur">
+                <a href=""><span><i class="sprite icon-25"></i>运营商认证</span><em>未认证 <i class="rArrow iconfont">&#xe688;</i></em></a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" class="abtn" readonly disabled="disabled" value="下一步" placeholder="下一步" />
+</div>
+
+
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/loanappli'], function(loanappli) {
+          loanappli.init();
+      });
+  });
+</script>
+</body>
+</html>

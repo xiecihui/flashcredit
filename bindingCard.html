@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>绑定银行卡</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="static/css/selectadd.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="alternates3">
+<div class="h20x"></div>
+<div class="mob-cont bindingCard">
+    <div class="box-header">
+        <i class="icon-div icon-img"><img src="static/img/bank-icon1.png" alt=""></i>持卡人： <em>张三</em>
+    </div>
+    <div class="box-footer clear">
+        <div class="card-List">
+            <ul class="clear">
+                <li class="jsbank">
+                    <label>
+                        <div class="bank-tit">
+                            <div class="bank-logo">
+                                <img src="static/pic/cardicon/jsbank.png" alt="建设银行">
+                            </div>
+                            <span>建设银行 <sub>储蓄卡</sub></span> <em>开户卡</em>
+                        </div>
+                        <div class="bank-number">
+                            <span>6222********1232</span> <em>138****1232</em>
+                        </div>
+                        <input type="radio" name="backcur" checked='' value="jsbank" />
+                    </label>
+                </li>
+                <li class="zsbank">
+                    <label>
+                        <div class="bank-tit">
+                            <div class="bank-logo">
+                                <img src="static/pic/cardicon/zsbank.png" alt="建设银行">
+                            </div>
+                            <span>招商银行 <sub>储蓄卡</sub></span> <em>还款卡</em>
+                        </div>
+                        <div class="bank-number">
+                            <span>6222********1232</span> <em>138****1232</em>
+                        </div>
+                        <input type="radio" name="backcur" value="zsbank" />
+                    </label>
+                </li>
+                <li class="zsbank">
+                    <label>
+                        <div class="bank-tit">
+                            <div class="bank-logo">
+                                <img src="static/pic/cardicon/zsbank.png" alt="建设银行">
+                            </div>
+                            <span>招商银行 <sub>储蓄卡</sub></span> <em>还款卡</em>
+                        </div>
+                        <div class="bank-number">
+                            <span>6222********1232</span> <em>138****1232</em>
+                        </div>
+                        <input type="radio" name="backcur" value="zsbank" />
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="card-List">
+            <ul class="clear">
+                <li class="jsbank">
+                    <label>
+                        <div class="bank-tit">
+                            <div class="bank-logo">
+                                <img src="static/pic/cardicon/jsbank.png" alt="建设银行">
+                            </div>
+                            <span>建设银行 <sub>储蓄卡</sub></span> <em>开户卡</em>
+                        </div>
+                        <div class="bank-number">
+                            <span>6222********1232</span> <em>138****1232</em>
+                        </div>
+                        <input type="radio" name="backcur" checked='' value="jsbank" />
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <p class="card-tigs">开户卡：用户用来借款和提现的储蓄卡</p>
+        <div class="card-pro">
+            <em>温馨提示：</em>
+            <p>1.新增银行卡默认为开户银行卡</p>
+            <p>2.更换开户卡，需前往金融工厂或联系金融工厂客服400-0322988修改银行卡，再签署合同</p>
+        </div>
+    </div>
+    <a class="abtn" href="javascript:;" title="">确认</a>
+</div>
+
+
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/bindingCard'], function(bindingCard) {
+          bindingCard.init();
+      });
+  });
+</script>
+</body>
+</html>

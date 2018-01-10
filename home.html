@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>闪信贷</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_jg01e1w7oic6jemi.css">
+</head>
+<body>
+<div class="h20x"></div>
+<div class="mod-box loanbox">
+    <div class="bt">
+        <i class="sprite mrgap icon-6"></i>借款金额
+        <i class="radius lb-radius"></i>
+        <i class="radius rb-radius"></i>
+    </div>
+    <div class="bf Jtbloans">
+        <div class="textInput">
+            <em class="increase">-</em><span>&yen<input type="text" value="15000" disabled="disabled"></span><em class="reduce">+</em>
+        </div>
+        <div id='wrap' class="touch">
+            <ul class="clear">
+                <li class="li1"></li>
+                <label class="lab1" id='lab1'></label>
+            </ul>
+            <div class="moeny">
+                <em>&yen 1000</em>
+                <em>&yen 2000</em>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="h20x"></div>
+<div class="mod-box termbox">
+    <div class="bt">
+        <i class="mrgap iconfont">&#xe755;</i>借款期限
+        <i class="radius lb-radius"></i>
+        <i class="radius rb-radius"></i>
+    </div>
+    <div class="bf">
+        <ul class="tremopt Jtrems">
+<!--             <li class="cur">7天</li>
+            <li>14天</li> 
+ -->            <li class="cur">21天</li>
+            <li>28天</li>
+        </ul>
+        <div class="tremft">
+            <p class="hd"><span>快速信审费：<em>&yen 18 </em></span><span>信用咨询费：<em>&yen 0.53</em> </span></p>
+            <p class="ft">到期预计还款额：<em>&yen 524.53</em></p>
+        </div>
+    </div>
+</div>
+
+<a class="btnyes" href="javascript:;" title="我要借钱">我要借钱</a>
+
+<ul class="mod-mune">
+    <li class="cur"> <a href="javascript:;" title="闪信贷"><i class="sprite icon-7 "></i>闪信贷</a> </li>
+    <li> <a href="javascript:;" title="我的"><i class="iconfont">&#xe60c;</i>我的</a> </li>
+</ul>
+
+<div class="mod-layer-div hide"></div>
+
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script>
+  require(['./static/js/config'], function() {
+      require(['controller/home','widget/money','layerui'], function(home,money,layerUi) {
+            home.init();
+            new money({
+                id:"#wrap",
+                increase:".increase",
+                reduce:".reduce",
+                max:2000,
+                min:1000
+            });
+            $('.btnyes').on('click',function(){
+                layerUi.style6('三个月不能申请！！！');
+            })
+      });
+  });
+</script>
+
+</body>
+</html>

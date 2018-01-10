@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>借款查询进度</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="mob-boxs schedules">
+    <div class="mob-divs">
+      <ul class="sche-box clear">
+        <li class="cur">
+          <a href="javascript:;" title="注册成功">
+            <span>2/8</span>
+            <p>注册成功</p>
+          </a>
+        </li>
+        <li class="cur">
+          <a href="javascript:;" title="注册成功">
+            <span>2/8</span>
+            <p>提交成功</p>
+          </a>
+        </li>
+        <li class="cur">
+          <a href="javascript:;" title="注册成功">
+            <span>2/8</span>
+            <p>审核通过</p>
+            <em>签署合同<i class="rArrow iconfont">&#xe688;</i></em>
+          </a>
+        </li>
+        <li >
+          <a href="javascript:;" title="注册成功">
+            <span>2/8</span>
+            <p>放款成功</p>
+            <em>提现<i class="rArrow iconfont">&#xe688;</i></em>
+          </a>
+        </li>
+        <li >
+          <a href="javascript:;" title="注册成功">
+            <span>2/8</span>
+            <p>记得还款</p>
+          </a>
+        </li>
+      </ul>
+      <a href="" class="scheconsult" title="咨询客服"><i class="iconfont">&#xe64c;</i>咨询客服</a>
+      <a class="abtn" id="schedulesBtn" href="javascript:;" title="">我要还款</a>
+    </div>
+<div class="mod-layer-div hide"></div>
+<div class="mod-layer scheduleslayer hide">
+    <div class="layer-cont">
+        <img src="static/img/payfor.png" alt="银钱铺子">
+    </div>
+    <p class="layer-title">应还金额：<em>524.53元</em></p>
+    <p class="layer-text">请保证绑定银行卡余额充足！</p>
+    <a class="schebtn" href="javascript:;">确认还款</a>
+</div>
+<<script src="static/js/controller/rem.js" type="text/javascript"></script>>
+<script src="static/js/lib/require/require.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+      });
+  });
+</script>
+</body>
+</html>

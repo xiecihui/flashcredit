@@ -1,0 +1,33 @@
+{
+    "id":"1",
+    "lists":[
+        {
+            "money":"1000",
+            "time":"2016／10／7",
+            "days":"11",
+            "state":"已还款",
+            "class":"paid"
+        },
+        {
+            "money":"1000",
+            "time":"2016／10／7",
+            "days":"11",
+            "state":"审核未通过",
+            "class":"passed"
+        },
+        {
+            "money":"1000",
+            "time":"2016／10／7",
+            "days":"11",
+            "state":"已关闭",
+            "class":"closed"
+        },
+        {
+            "money":"1000",
+            "time":"2016／10／7",
+            "days":"11",
+            "state":"还款成功",
+            "class":"paid"
+        }
+    ]
+}

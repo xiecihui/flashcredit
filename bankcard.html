@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="wap-font-scale" content="no">
+    <meta name="applicable-device" content="mobile">
+    <title>绑定银行卡</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="static/css/selectadd.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_9kyachszhqwipb9.css">
+</head>
+<body class="mob-boxs bankcard" id="Jbankcard">
+    <div class="mob-divs">
+        <ul class="preinfo clear">
+            <li>
+                <span>持卡人</span>
+                <input type="text" id="JmbName" readonly="true" value="张三四">
+            </li>
+            <li>
+                <span>预留手机号</span>
+                <input type="text" id="JmbcardTel" value="17721198624">
+            </li>
+            <li>
+                <span>选择银行</span>
+                <select>
+                    <option value="" selected=""> 选择 </option>
+                    <option value="1">中国工商银行</option>
+                    <option value="2">中国农业银行</option>
+                </select>
+                <i class="rArrow iconfont">&#xe688;</i>
+            </li>
+            <li>
+                <span>银行卡号</span>
+                <input id="Jbankcard" type="text" readonly="true" value="1231412341234123">
+            </li>
+        </ul>
+        <div class="bankTigs">
+            ~ 新卡必须是本人名下储蓄卡 ~
+        </div>
+        <a class="abtn submit" href="javascript:;" title="">下一步</a>
+    </div>
+
+<div class="mod-layer-div hide"></div>
+<div class="mod-layer bankcardlayer hide">
+    <div class="layer-cont">
+        <img src="static/img/bankerrer.png" alt="闪信贷">
+    </div>
+    <p class="layer-title"><i class="iconfont">&#xe64c;</i>持卡人姓名与银行卡账户姓名不一致</p>
+    <a class="layer-close" href="javascript:;">朕知道了</a>
+</div>
+
+<script src="static/js/lib/require/require.js"></script>
+<script src="static/js/controller/rem.js"></script>
+<script>
+  require(['./static/js/config.js'], function() {
+      require(['controller/home'], function(home) {
+          home.init();
+      });
+  });
+</script>
+</body>
+</html>
